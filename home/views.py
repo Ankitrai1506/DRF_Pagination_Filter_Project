@@ -7,6 +7,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 
 # Create your views here.
+#create
 
 class StudentApiview(ListCreateAPIView):
     queryset= Student.objects.all()
