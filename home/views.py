@@ -7,20 +7,20 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 
 # Create your views here.
-#create
+
 
 class StudentApiview(ListCreateAPIView):
     queryset= Student.objects.all()
     serializer_class = StudentSerializer
     pagination_class= Mypagination
-    #filter_backends= [DjangoFilterBackend]
-    #filterset_fields= ['city']
+    filter_backends= [DjangoFilterBackend]
+    filterset_fields= ['city']
     
     #filter_backends = [SearchFilter]     #it use for Search filtering
     #search_fields = ['name']
 
-    filter_backends = [OrderingFilter]
-    ordering_fields = ['name']
+    #filter_backends = [OrderingFilter]
+    #ordering_fields = ['name']
 
 
 
